@@ -29,7 +29,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         l1 = (ListView) findViewById(R.id.ListView1);
         l1.setOnItemClickListener(this);
         l1.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        array1 = new Double[20];
+        array1 = new Double[21];
         ArrayAdapter<Double> adp;
         adp = new ArrayAdapter<Double>(this,R.layout.support_simple_spinner_dropdown_item , array1);
         l1.setAdapter(adp);
@@ -44,14 +44,14 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         array1[0] = num1;
         if (typeProj1 == 1) {
             num1 = t1.getDoubleExtra("firstNum", 1);
-            for (i = 1; i < 20; i++) {
+            for (i = 1; i <=20; i++) {
                 array1[i] = num1 + d;
                 num1 = num1 + d;
             }
         }
         if (typeProj1 == 2) {
             num1 = t1.getDoubleExtra("firstNum", 1);
-            for (i = 1; i < 20; i++) {
+            for (i = 1; i <= 20; i++) {
                 array1[i] = num1 * d;
                 num1 = num1 * d;
             }
